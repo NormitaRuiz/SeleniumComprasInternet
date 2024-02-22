@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite Luma Ecommerce">
+
+    <test name="LoginUser">
+        <classes>
+            <class name="nopCommerce.tests.LoginUser">
+                <methods>
+                    <include name="loginUserExit"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="LoginIncorrectPassword">
+        <classes>
+            <class name="nopCommerce.tests.LoginIncorrectPassword">
+                <methods>
+                    <include name="incorrectPasswordLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="NewAddressFakerData">
+        <classes>
+            <class name="nopCommerce.tests.NewAddressFakerData">
+                <methods>
+                    <include name="incorrectPasswordLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="BuySuccessful">
+        <classes>
+            <class name="nopCommerce.tests.BuySuccessful">
+                <methods>
+                    <include name="buyExit"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="BuySuccessCredCardInvalid">
+        <classes>
+            <class name="nopCommerce.tests.BuySuccessCredCardInvalid">
+                <methods>
+                    <include name="buyCredCardInvalid"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite Luma Ecommerce">
+
+    <test name="Register Test">
+        <classes>
+            <class name="nopCommerce.tests.RegisterTest">
+                <methods>
+                    <include name="registerNewAccountExitFakeData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="RegisterTestManualData">
+        <classes>
+            <class name="nopCommerce.tests.RegisterTestManualData">
+                <methods>
+                    <include name="registerNewAccountManual"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="RegisterTestIncompleteFields">
+        <classes>
+            <class name="nopCommerce.tests.RegisterTestManualData">
+                <methods>
+                    <include name="registerNewAccountIncompleteFields"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="RegisterTestExistinEmail">
+        <classes>
+            <class name="nopCommerce.tests.RegisterTestExistinEmail">
+                <methods>
+                    <include name="registerNewAccountManual"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="LoginUser">
+        <classes>
+            <class name="nopCommerce.tests.LoginUser">
+                <methods>
+                    <include name="loginUserExit"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="LoginIncorrectPassword">
+        <classes>
+            <class name="nopCommerce.tests.LoginIncorrectPassword">
+                <methods>
+                    <include name="incorrectPasswordLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="LoginForgotPassword">
+        <classes>
+            <class name="nopCommerce.tests.LoginForgotPassword">
+                <methods>
+                    <include name="forgotEmailPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="NewAddressFakerData">
+        <classes>
+            <class name="nopCommerce.tests.NewAddressFakerData">
+                <methods>
+                    <include name="newAddressFakeData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="NewAddressManualData">
+        <classes>
+            <class name="nopCommerce.tests.NewAddressManualData">
+                <methods>
+                    <include name="newAddressManualData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="BuySuccessful">
+        <classes>
+            <class name="nopCommerce.tests.BuySuccessful">
+                <methods>
+                    <include name="buyExit"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

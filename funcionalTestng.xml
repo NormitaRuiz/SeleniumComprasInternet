@@ -20,6 +20,25 @@
             </class>
         </classes>
     </test>
+    <test name="NewAddressFakerData">
+        <classes>
+            <class name="nopCommerce.tests.NewAddressFakerData">
+                <methods>
+                    <include name="newAddressFakeData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="NewAddressManualData">
+        <classes>
+            <class name="nopCommerce.tests.NewAddressManualData">
+                <methods>
+                    <include name="newAddressManualData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
     <test name="RegisterTestIncompleteFields">
         <classes>
             <class name="nopCommerce.tests.RegisterTestManualData">
@@ -65,26 +84,6 @@
             </class>
         </classes>
     </test>
-
-    <test name="NewAddressFakerData">
-        <classes>
-            <class name="nopCommerce.tests.NewAddressFakerData">
-                <methods>
-                    <include name="newAddressFakeData"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-
-    <test name="NewAddressManualData">
-        <classes>
-            <class name="nopCommerce.tests.NewAddressManualData">
-                <methods>
-                    <include name="newAddressManualData"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
     <test name="BuySuccessful">
         <classes>
             <class name="nopCommerce.tests.BuySuccessful">
@@ -94,6 +93,5 @@
             </class>
         </classes>
     </test>
-
 
 </suite>

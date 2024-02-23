@@ -31,6 +31,7 @@ public class NewAddressManualData extends BaseTest {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='add-button']/button[contains(text(), 'Add new')]"))) ;
         btnNewAddress.click();
         driver.navigate().refresh();
+        Thread.sleep(2000);
         registerPage.fillOutFormNewAddressManualData();
         registerPage.newAddressCountry();
         registerPage.submitConfNewAddress();

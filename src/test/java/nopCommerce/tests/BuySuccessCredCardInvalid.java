@@ -7,13 +7,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
 
 public class BuySuccessCredCardInvalid extends BaseTest {
 
     String msgConfirmacion="shopping cart";
-    String msgShippingCredCar="Your Shopping Cart is empty!";
+    String msgCredCarIncorrect="Wrong card number";
+
+
+    @Test
     public void buyCredCardInvalid() throws InterruptedException {
         registerPage.LinkLogin();
         registerPage.loginUser();
@@ -39,15 +43,18 @@ public class BuySuccessCredCardInvalid extends BaseTest {
         Thread.sleep(2000);
         registerPage.checkNextDay();
         registerPage.btnShippingMethod();
+        Thread.sleep(2000);
         registerPage.checkCredCard();
         registerPage.btnPaymetMethod();
+        Thread.sleep(2000);
         registerPage.credCarNamePayment();
+        Thread.sleep(2000);
         registerPage.btnPaymetInformation();
-        //mensaje de confirmacion por tarjeta
-        WebElement msgCredCardCestaVacia=new WebDriverWait(driver, Duration.ofSeconds(Variables.timeSeconds))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='order-summary-content']/div[contains(text(), 'Your Shopping Cart is empty!')])")));
-        String msgCredCard=msgCredCardCestaVacia.getText();
-        Assert.assertEquals(msgShippingCredCar, msgCredCard);
+        //mensaje de validacion msg de error
+        WebElement msgCredCardInvalido=new WebDriverWait(driver, Duration.ofSeconds(Variables.timeSeconds))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='message-error validation-summary-errors']/ul/li")));
+        String msgCredCard=msgCredCardInvalido.getText();
+        Assert.assertEquals(msgCredCarIncorrect, msgCredCard);
 
 
 
